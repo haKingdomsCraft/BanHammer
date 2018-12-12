@@ -1,0 +1,25 @@
+name: BanHammer
+main: ElementalMinecraftGaming\PlayerGPS\Main
+version: 1.0.0
+api: [3.3.4]
+load: STARTUP
+author: ElementalMinecraftGaming
+description: Ban players with comedy!
+
+commands:
+ enablehammer:
+  description: Enable the BAN HAMMER
+  usage: "/enablehammer" 
+  aliases: [ebh]
+ disablehammer:
+  description: Turn off BAN HAMMER
+  usage: "/disablehammer"
+  aliases: [dbh]
+
+permissions:
+  player.bh:
+    default: OP
+    description: Enable BAN HAMMER
+  player.bhd:
+    default: OP
+    description: Disable BAN HAMMER
