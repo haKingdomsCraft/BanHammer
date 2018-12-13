@@ -16,7 +16,7 @@ class Main extends PluginBase implements listener {
     }
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool { 
         if ($sender->hasPermission("player.bh")) {
-            if (strtolower($command->getName()) == "banhammer") {
+            if (strtolower($command->getName()) == "enablehammer") {
                 if ($sender instanceof Player) {
                     $sender->sendMessage(TextFormat::BLUE . "Ban hammer activated!") ;
                     $this->hasPc[$sender->getName()] = true;
@@ -28,7 +28,7 @@ class Main extends PluginBase implements listener {
             }
         }
         if ($sender->hasPermission("player.bhd")) {
-            if (strtolower($command->getName()) == "disablebanhammer") {
+            if (strtolower($command->getName()) == "disablehammer") {
                 if ($sender instanceof Player) {
                     $sender->sendMessage(TextFormat::GOLD . "Deactivated Ban Hammer");
                     if (isset($this->hasPc[$event->getPlayer()->getName()])) {
