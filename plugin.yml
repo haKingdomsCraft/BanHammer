@@ -1,5 +1,5 @@
 name: BanHammer
-main: ElementalMinecraftGaming\PlayerGPS\Main
+main: ElementalMinecraftGaming\BanHammer\Main
 version: 1.0.0
 api: [3.3.4]
 load: STARTUP
