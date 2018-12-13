@@ -50,9 +50,9 @@ class Main extends PluginBase implements listener {
     public function onEntityDamage(EntityDamageEvent $event) {
         if (isset($this->hasBh[$event->getPlayer()->getName()])) {
             $target = $event->getEntity() ;
-            $this->processIPBan($entity->getAddress(), $player);
-            $server->getIPBans()->addBan($ip, $reason, null);
+            $player = $event->getPlayer();
+            $reason = "Breaking rules or annoying staff";
+            $this->processIPBan($target->getAddress(), $player, $reason);
         }
     }
 }
-
